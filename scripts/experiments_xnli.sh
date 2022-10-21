@@ -64,7 +64,7 @@ python -m src.run_sentence_cls \
     --alpha_smoothing 0.1 \
     --temp_scaling \
     --cal_lang sw \
-    --cal_size 500
+    --cal_size -1 #-1 means using the entire validation data
 
 # Calibrate on Swahili specifically using it's own dev data for fine-tuning (FSL + LS)
 echo "Calibrate on Swahili specifically using it's own dev data for fine-tuning (FSL + LS)"
@@ -77,4 +77,4 @@ python -m src.run_sentence_cls \
     --alpha_smoothing 0.1 \
     --few_shot_learning \
     --few_shot_lang sw \
-    --few_shot_size 2000
+    --few_shot_size -1 #-1 means using the entire validation data
