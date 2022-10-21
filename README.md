@@ -64,4 +64,4 @@ python -m src.run_sentence_cls \
     --cal_size 500
 ```
 
-Other examples can be found in [`scripts/experiments_xnli.sh`](scripts/experiments_xnli.sh) and [`scripts/experiments_xcopa.sh`]((scripts/experiments_xcopa.sh))
+Other examples can be found in [`scripts/experiments_xnli.sh`](scripts/experiments_xnli.sh) and [`scripts/experiments_xcopa.sh`](scripts/experiments_xcopa.sh)
