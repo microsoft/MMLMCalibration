@@ -77,4 +77,4 @@ python -m src.run_sentence_cls \
     --alpha_smoothing 0.1 \
     --few_shot_learning \
     --few_shot_lang sw \
-    --few_shot_size 500
+    --few_shot_size 2000
