@@ -47,13 +47,19 @@ def build_parser(args=[]):
     )
     parser.set_defaults(load_train_en_only=True)
     parser.add_argument(
-        "--data_dir", default="data/", help="Path where data is located",
+        "--data_dir",
+        default="data/",
+        help="Path where data is located",
     )
     parser.add_argument(
-        "--save_dir", default="out/", help="Path where to store the results",
+        "--save_dir",
+        default="out/",
+        help="Path where to store the results",
     )
     parser.add_argument(
-        "--plot_dir", default="plots/", help="Path where to store the results",
+        "--plot_dir",
+        default="plots/",
+        help="Path where to store the results",
     )
     parser.add_argument(
         "--device", default="cuda", help="Device on which to run experiments"
@@ -140,7 +146,7 @@ def build_parser(args=[]):
     parser.add_argument("--eval_batch_size", type=int, default=8)
     parser.add_argument("--lr", type=float, default=1e-5)
     parser.add_argument("--num_epochs", type=int, default=1)
-    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--seed", type=int, default=1)
     parser.add_argument("--eval_every", type=int, default=500)
     parser.add_argument("--clip_grad_norm", type=float, default=0)
     parser.add_argument("--re_train", action="store_true")

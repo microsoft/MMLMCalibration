@@ -2,6 +2,7 @@ results/**
 wandb/**
 out/**
 data/**
+src/netcal_mod/**
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -2,7 +2,9 @@ import pdb
 from imp import is_builtin
 
 import numpy as np
-from src.netcal.metrics.ECE import ECE
+
+# from src.netcal.metrics.ECE import ECE
+from netcal.metrics import ECE
 from src.trainer import predict
 from torch.utils.data import DataLoader
 
@@ -87,7 +89,10 @@ def get_callibration_error_nmodels(
     test_loader = DataLoader(test_dataset, batch_size=batch_size)
 
     pred_probs_all = [
-        predict(model, test_loader, device=device)[np.newaxis,] for model in models
+        predict(model, test_loader, device=device)[
+            np.newaxis,
+        ]
+        for model in models
     ]
     pred_probs_all = np.concatenate(pred_probs_all, axis=0)
     pred_probs = pred_probs_all.mean(axis=0)
