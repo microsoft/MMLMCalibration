@@ -1,5 +1,19 @@
 # MMLMCalibration
 
+<h2 align="center">
+  Official Code for the paper: "On the Calibration of Massively Multilingual Language Models"
+</h2>
+
+<p align="center">
+  <a href="https://2022.emnlp.org/"><img src="https://img.shields.io/badge/EMNLP%20-2022-blue"></a>
+  <a href="https://github.com/microsoft/MMLMCalibration/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green">
+  </a>
+</p>
+
+
+Massively Multilingual Language Models (MMLMs) have recently gained popularity due to their surprising effectiveness in cross-lingual transfer. While there has been much work in evaluating these models for their performance on a variety of tasks and languages, little attention has been paid on how well calibrated these models are with respect to the confidence in their predictions. We first investigate the calibration of MMLMs in the zero-shot setting and observe a clear case of miscalibration in low-resource languages or those which are typologically diverse from English. Next, we empirically show that calibration methods like temperature scaling and label smoothing do reasonably well towards improving calibration in the zero-shot scenario. We also find that few-shot examples in the language can further help reduce the calibration errors, often substantially. Overall, our work contributes towards building more reliable multilingual models by highlighting the issue of their miscalibration, understanding what language and model specific factors influence it, and pointing out the strategies to improve the same.
+
 
 #### Dependencies
 - Compatible with Python3.7
