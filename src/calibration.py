@@ -1,6 +1,6 @@
 import pdb
 from imp import is_builtin
-
+from typing import Dict
 import numpy as np
 
 # from src.netcal.metrics.ECE import ECE
@@ -9,8 +9,16 @@ from src.trainer import predict
 from torch.utils.data import DataLoader
 
 
+def _adjust_binary_probs(pred_probs: Dict[int, np.ndarray]) -> Dict[int, np.ndarray]:
+    is_binary_confidence = pred_probs.shape[1] == 2
+    if is_binary_confidence:
+        return  pred_probs[:, 1]
+    else:
+        return pred_probs
+
 def get_callibration_error_from_preds_nd_labels(pred_probs, labels, M):
     ece_calculator = ECE(bins=M)
+    pred_probs = _adjust_binary_probs(pred_probs)
     return ece_calculator.measure(pred_probs, labels)
 
     # is_binary = len(pred_probs.shape) == 1
